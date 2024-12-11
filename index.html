@@ -2,6 +2,7 @@
 <head>
     <title>Leaf Health Evaluation</title>
 	<meta name="robots" content="noindex">
+	<meta charset="utf-8" />
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
@@ -20,10 +21,11 @@
 		body {
   	font-family: 'Inter', sans-serif;
   	color: #666666;
-	background-color: #f7fafc;
+	background-color: black;
 	font-size: 16px;
 	padding-bottom: 5rem;
 }
+
 
 .headline {
 	font-size: 1.25rem;
@@ -32,6 +34,7 @@
 
 .text--small {
 	font-size: 0.875rem;
+	color: yellowgreen;
 }
 
 a {
@@ -53,6 +56,7 @@ span.icon {
 	position: absolute;
 	padding: 0.5rem;
 	right: 0;
+	color: black;
 }
 
 .header {
@@ -79,7 +83,7 @@ span.icon {
 	margin-bottom: 0.5rem;
 	font-size: 0.875rem;
 	font-weight: 600;
-	color: #718096;
+	color: yellowgreen;
 }
 
 .content {
@@ -100,6 +104,19 @@ span.icon {
 
 #imageOptions.content__grid {
     grid-template-rows: repeat(2, minmax(0, 0.5fr));
+}
+
+.credit
+{
+	font-size: 24px;
+	background-color: #606FC7;
+	color: cyan;
+	height: 40px;
+	width: 22%;
+	text-align: center;
+	margin: 10px;
+	right: 0;
+	position: absolute;
 }
 
 .flex {
@@ -152,6 +169,8 @@ input:disabled {
 	width: 100%;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
+	color: black;
+	background-color: aqua;
 }
 
 .input--left {
@@ -168,6 +187,7 @@ input:disabled {
 .input__label {
 	margin-bottom: 0.5rem;
 	display: block;
+	color: yellowgreen
 }
 
 .bttn {
@@ -175,11 +195,12 @@ input:disabled {
 	padding-bottom: 0.5rem;
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
-	background-color: white;
+	background-color: aqua;
 	border-width: 1px;
 	border-color: #cbd5e0;
 	margin-right: -0.5rem;
 	height: 2.5rem;
+	color: black;
 }
 
 .bttn.fill {
@@ -304,20 +325,20 @@ input:disabled {
 </head>
 <body>
 <form id="inputForm">
-    <div class="header">
+    <div class="header" style="background-color: black;">
         <div class="header__grid">
-            <p style="font-size: 25px; color: blue;">Leaf Health Evaluation</p>
+            <p style="font-size: 30px; font-weight: bold; color: lightgreen;">Leaf Health Evaluation</p>
             <div>
                 <label class="header__label" for="model">Model</label>
-                <input class="input" type="text" id="model" />
+                <input class="input" type="text" id="model"/>
             </div>
             <div>
                 <label class="header__label" for="version">Version</label>
-                <input class="input" type="number" id="version" />
+                <input class="input" type="number" id="version"/>
             </div>
             <div>
                 <label class="header__label" for="api_key">API Key</label>
-                <input class="input" type="text" id="api_key" />
+                <input class="input" type="text" id="api_key"/>
             </div>
         </div>
     </div>
@@ -335,7 +356,7 @@ input:disabled {
             <div class="col-12-m8" id="fileSelectionContainer">
                 <label class="input__label" for="file">Select File</label>
                 <div class="flex">
-                    <input class="input input--left flex-1" type="text" id="fileName" disabled />
+                    <input class="input input--left flex-1" type="text" id="fileName" disabled style="background-color: aqua;"/>
                     <button id="fileMock" class="bttn right active">Browse</button>
                 </div>
                 <input style="display: none;" type="file" id="file" />
@@ -654,7 +675,6 @@ var resizeImage = function(base64Str) {
 	height: 48px;
 }
 </style>
-<a href="https://codepen.io/roboflow/pen/VwaKXdM" target="_blank" id="codepenLink"><img src="https://i.imgur.com/Q1vOZ48.png" /></a>
-
+<div class="credit right left">Credit: WeAreHereForFun</div>
 </body>
 </html>
